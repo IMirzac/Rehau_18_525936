@@ -362,23 +362,4 @@ Public Class FProtokoll
 
 #End Region
 
-   
-<<<<<<< HEAD
-    Private Sub CommandButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-=======
-    Private Sub CommandButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CommandButton1.Click
-        fdsgfasdjk gf f asdf asdf asd
->>>>>>> refs/remotes/origin/2016_02_04_IuMi
-        'LoadChargeFromBD()
-        Call Chargen_erzeugen()
-        'Record_Exist("160205000000")
-        'Call Kopfdaten_schreiben(1, 2, 3)
-        ' Call Rezept_schreiben(1, 2)
-        'Call Meldung_eintragen("Prozess", 1, 2, "Meldung", "Charge Start !")
-        Chargen_Meldungen("Prozess", "Meldung", "Charge Neustart !")
-        Chargen_Meldungen("Prozess", "Meldung", "Charge Stop !")
-        Chargen_Meldungen("Prozess", "Meldung", "Charge Abbruch !")
-        Chargen_Meldungen("Prozess", "Meldung", "Charge Ende !")
-    End Sub
 End Class
