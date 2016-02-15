@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BCA79B3D-E1BB-4421-81A9-329E1DAF3722}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>HMI.My.MyApplication</StartupObject>
+    <RootNamespace>HMI</RootNamespace>
+    <AssemblyName>Rehau_18_525936</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>Resources\Reinhardt.ico</ApplicationIcon>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Rehau_25_527951.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Rehau_25_527951.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VisiWinNET.Standard.Client" />
+    <Reference Include="VisiWinNET.Standard.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Taskleiste.vb" />
+    <Compile Include="Reports\crpProtokoll.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpProtokoll.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Diagnose\FAlarm.designer.vb">
+      <DependentUpon>FAlarm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnose\FAlarm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diagnose\FAlarmHistory.designer.vb">
+      <DependentUpon>FAlarmHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnose\FAlarmHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diagnose\FAlarmHistoryFilter.designer.vb">
+      <DependentUpon>FAlarmHistoryFilter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnose\FAlarmHistoryFilter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diagnose\FBedienerfuehrung.designer.vb">
+      <DependentUpon>FBedienerfuehrung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnose\FBedienerfuehrung.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trend\FColorSelect.Designer.vb">
+      <DependentUpon>FColorSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Trend\FColorSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trend\FTrendSelect.Designer.vb">
+      <DependentUpon>FTrendSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Trend\FTrendSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagement\FBenutzerverwaltung.designer.vb">
+      <DependentUpon>FBenutzerverwaltung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\FBenutzerverwaltung.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagement\FBenutzer_bearbeiten.designer.vb">
+      <DependentUpon>FBenutzer_bearbeiten.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\FBenutzer_bearbeiten.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Allgemein\FBildschirm_reinigen.designer.vb">
+      <DependentUpon>FBildschirm_reinigen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Allgemein\FBildschirm_reinigen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Allgemein\FCentral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Allgemein\FCentral.Designer.vb">
+      <DependentUpon>FCentral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnose\FEditAlarmNotes.designer.vb">
+      <DependentUpon>FEditAlarmNotes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnose\FEditAlarmNotes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Allgemein\FEinstellungen.designer.vb">
+      <DependentUpon>FEinstellungen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Allgemein\FEinstellungen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Allgemein\FMessageBox.designer.vb">
+      <DependentUpon>FMessageBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Allgemein\FMessageBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Protokoll\FProtokoll.designer.vb">
+      <DependentUpon>FProtokoll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Protokoll\FProtokoll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Protokoll\FProtokollSelect.designer.vb">
+      <DependentUpon>FProtokollSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Protokoll\FProtokollSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recipe\FRecipe.designer.vb">
+      <DependentUpon>FRecipe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Recipe\FRecipe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recipe\FRecipeSelect.designer.vb">
+      <DependentUpon>FRecipeSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Recipe\FRecipeSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Allgemein\FStart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Allgemein\FStart.Designer.vb">
+      <DependentUpon>FStart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnose\FStatistic.designer.vb">
+      <DependentUpon>FStatistic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnose\FStatistic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatusAnlage\FStatus_Daten.designer.vb">
+      <DependentUpon>FStatus_Daten.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StatusAnlage\FStatus_Daten.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hand\FStatus_Hand.designer.vb">
+      <DependentUpon>FStatus_Hand.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hand\FStatus_Hand.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trend\FTrend.designer.vb">
+      <DependentUpon>FTrend.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Trend\FTrend.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vorlage\FVorlage_Kopf_Fusszeile.designer.vb">
+      <DependentUpon>FVorlage_Kopf_Fusszeile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vorlage\FVorlage_Kopf_Fusszeile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vorlage\FVorlage_Kopfzeile.Designer.vb">
+      <DependentUpon>FVorlage_Kopfzeile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vorlage\FVorlage_Kopfzeile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vorlage\FVorlage_Kopf_Fuss_Stoerzeile.designer.vb">
+      <DependentUpon>FVorlage_Kopf_Fuss_Stoerzeile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vorlage\FVorlage_Kopf_Fuss_Stoerzeile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAlarm.vb" />
+    <Compile Include="MPublic_Definition.vb" />
+    <Compile Include="MPublic_Methods.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\crpProtokoll.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpProtokoll.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagnose\FAlarm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FAlarm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagnose\FAlarmHistory.resx">
+      <DependentUpon>FAlarmHistory.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagnose\FAlarmHistoryFilter.resx">
+      <DependentUpon>FAlarmHistoryFilter.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagnose\FBedienerfuehrung.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FBedienerfuehrung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trend\FColorSelect.resx">
+      <DependentUpon>FColorSelect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trend\FTrendSelect.resx">
+      <DependentUpon>FTrendSelect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\FBenutzerverwaltung.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FBenutzerverwaltung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\FBenutzer_bearbeiten.resx">
+      <DependentUpon>FBenutzer_bearbeiten.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Allgemein\FBildschirm_reinigen.resx">
+      <DependentUpon>FBildschirm_reinigen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Allgemein\FCentral.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FCentral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagnose\FEditAlarmNotes.resx">
+      <DependentUpon>FEditAlarmNotes.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Allgemein\FEinstellungen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FEinstellungen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Allgemein\FMessageBox.resx">
+      <DependentUpon>FMessageBox.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Protokoll\FProtokoll.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FProtokoll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Protokoll\FProtokollSelect.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FProtokollSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recipe\FRecipe.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FRecipe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recipe\FRecipeSelect.resx">
+      <DependentUpon>FRecipeSelect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Allgemein\FStart.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FStart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagnose\FStatistic.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FStatistic.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatusAnlage\FStatus_Daten.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FStatus_Daten.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hand\FStatus_Hand.resx">
+      <DependentUpon>FStatus_Hand.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trend\FTrend.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FTrend.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vorlage\FVorlage_Kopf_Fusszeile.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FVorlage_Kopf_Fusszeile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vorlage\FVorlage_Kopfzeile.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FVorlage_Kopfzeile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vorlage\FVorlage_Kopf_Fuss_Stoerzeile.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FVorlage_Kopf_Fuss_Stoerzeile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reinhardt_Kopfzeile_MP_PC.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reinhardt_Desktop.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\Reinhardt_Desktop1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\picKopfzeile.Images.bmp" />
+    <Content Include="Resources\Reinhardt Logo bunt ohne Zusatz klein.jpg" />
+    <Content Include="Resources\Reinhardt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties VisiWinNETProjectName="Rehau_18_525936" VisiWinNETVersion="6.5" VisiWinNETRuntimeType="Standard" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

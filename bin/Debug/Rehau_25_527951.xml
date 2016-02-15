@@ -1,0 +1,75 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Rehau_18_525936
+</name>
+</assembly>
+<members>
+<member name="P:HMI.My.Resources.Resources.ResourceManager">
+	<summary>
+  Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+</summary>
+</member><member name="P:HMI.My.Resources.Resources.Culture">
+	<summary>
+  Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+  Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+</summary>
+</member><member name="T:HMI.My.Resources.Resources">
+	<summary>
+  Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+</summary>
+</member><member name="M:HMI.FBenutzerverwaltung.ShowDialog">
+	<summary>
+ Aufruf des Dialoges zur Anzeige aller Benutzer
+ (kehrt erst zurück, wenn der Dialog geschlossen wird).
+ Übergabe:
+   keine
+ Rückgabe:
+   keine
+ </summary>
+</member><member name="M:HMI.FUser.ShowAddDialog">
+	<summary>
+ Aufruf des Dialoges zum Hinzufügen eines Benutzers
+ (kehrt erst zurück, wenn der Dialog geschlossen wird).
+ Übergabe:
+   keine
+ Rückgabe:
+   ShowAddDialog: VisiWinNET.UserManagement.User : erfolgreich hinzugefügter Benutzer
+                  Nothing : Abbruch
+ </summary>
+</member><member name="M:HMI.FUser.ShowChangeDialog(System.String)">
+	<summary>
+ Aufruf des Dialoges zum Ändern eines Benutzers
+ (kehrt erst zurück, wenn der Dialog geschlossen wird).
+ Übergabe:
+   userName: Name des zu ändernden Benutzers
+ Rückgabe:
+   ShowAddDialog: VisiWinNET.UserManagement.User : erfolgreich hinzugefügter Benutzer
+                  Nothing : Abbruch
+ </summary>
+</member><member name="M:HMI.FMessageBox.Show(System.String)">
+ Aufruf des Dialoges zur Anzeige einer Nachricht (MessageBox)
+ (kehrt erst zurück, wenn der Dialog geschlossen wird).
+ Übergabe:
+   textType: Auswahl des Textbereiches, wenn bei Parameter "text" 
+             Pfad und Name eines Indextextes angegeben wird. 
+   text: Text der anzuzeigenden Meldung:
+         - direkte Angabe des Textes, z.B. "Hallo"
+         - Angabe von Pfad und Name eines Indextextes mit vorangestelltem @-Zeichen,
+           z.B. "@FCentral.Status.Text1"; durch den Parameter "textType" kann der Bereich
+           gewählt werden, in dem der Text definiert ist.
+   caption: Text für die Fensterüberschrift:
+            - direkte Angabe des Textes, z.B. "Hallo"
+            - Angabe von Pfad und Name eines Indextextes mit vorangestelltem @-Zeichen,
+              z.B. "@FCentral.Status.Text1"; der Parameter "textType" gilt hier nicht!
+              Es gilt immer der Bereich "ClientApplication", also die Textgruppe "Benutzertexte".
+   buttons: Auswahl der anzuzeigenden Schaltflächen.
+   icon: Auswahl des anzuzeigenden Symbols.
+   defaultButton: Angabe der Schaltfläche, die bei der Return-Taste betätigt wird.
+ Rückgabe:
+   ShowMessageBox: DialogResult.???: betätigte Schaltfläche
+
+</member>
+</members>
+</doc>
